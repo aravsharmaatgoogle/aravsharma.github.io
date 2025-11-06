@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arav — Online Shopping Site</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #f3f3f3; }
+
+    /* HEADER */
+    header {
+      background: #131921;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ff9900;
+      text-decoration: none;
+    }
+
+    .search-bar {
+      display: flex;
+      flex: 1;
+      max-width: 600px;
+      margin: 0.5rem;
+    }
+
+    .search-bar input {
+      flex: 1;
+      padding: 0.5rem;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    .search-bar button {
+      background: #febd69;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    /* CATEGORIES */
+    .categories {
+      background: #232f3e;
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .categories a {
+      color: white;
+      padding: 0.75rem 1rem;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .categories a:hover {
+      background: #37475a;
+    }
+
+    /* PRODUCTS SECTION */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s;
+      overflow: hidden;
+    }
+
+    .card:hover { transform: translateY(-5px); }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card h3 { margin: 0.5rem; font-size: 1rem; }
+    .card p { margin: 0.25rem; color: #007600; }
+
+    .card button {
+      background: #febd69;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem 0 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .card button:hover {
+      background: #f3a847;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #131921;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    @media(max-width:600px){
+      header { flex-direction: column; align-items: stretch; }
+      .search-bar { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <a href="#" class="logo">Arav.in</a>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search for products...">
+      <button>🔍</button>
+    </div>
+
+    <div class="nav-links">
+      <a href="#">Sign In</a>
+      <a href="#">Orders</a>
+      <a href="#">Cart 🛒</a>
+    </div>
+  </header>
+
+  <!-- CATEGORIES -->
+  <div class="categories">
+    <a href="#">All</a>
+    <a href="#">Electronics</a>
+    <a href="#">Fashion</a>
+    <a href="#">Home</a>
+    <a href="#">Grocery</a>
+    <a href="#">Toys</a>
+    <a href="#">Books</a>
+    <a href="#">Mobiles</a>
+    <a href="#">Beauty</a>
+    <a href="#">More...</a>
+  </div>
+
+  <!-- PRODUCT GRID -->
+  <section class="container">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="Phone">
+      <h3>Smartphone</h3>
+      <p>₹15,999</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Watch">
+      <h3>Luxury Watch</h3>
+      <p>₹2,499</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Shoes">
+      <h3>Sneakers</h3>
+      <p>₹1,799</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1606813909355-9a5d3ef10b9c" alt="Laptop">
+      <h3>Laptop</h3>
+      <p>₹54,999</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1616627453772-5021b88e79ed" alt="Groceries">
+      <h3>Daily Groceries</h3>
+      <p>₹299</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1585559604903-b1fc8dc7e266" alt="Book">
+      <h3>Bestseller Book</h3>
+      <p>₹499</p>
+      <button>Add to Cart</button>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Arav.in | Online Shopping for Everyone</p>
+  </footer>
+
+</body>
+</html>
